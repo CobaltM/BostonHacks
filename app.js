@@ -20,10 +20,8 @@ app.get('/',function(req,res) {
 
 
 /* Server Configuration Section */ 
-
-var server = app.listen(process.env.PORT || 5000, function () {
-	var host = server.address().address
-	var port = server.address().port
+app.set('port',(process.env.PORT || 5000))
+var server = app.listen(app.get('port'), function () {
 	console.log("Example app listening at http://%s:%s", host, port)
 }); 
 
