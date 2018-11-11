@@ -1,0 +1,64 @@
+body, html {
+    background-color: #f7f7f7;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    font-size: 10em;
+}
+
+.bold {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.center {
+    text-align: center;
+}
+
+.app-card {
+    -webkit-box-shadow: 15px 15px 50px -10px rgba(179,179,179,0.54);
+    -moz-box-shadow: 15px 15px 50px -10px rgba(179,179,179,0.54);
+    box-shadow: 15px 15px 50px -10px rgba(179,179,179,0.54);
+    border-radius: 30px;
+    background-color: #fff;
+    padding: 50px 0 90px 0;
+    margin-top: 100px;
+}
+
+.inner-text {
+    font-size: 1.7em;
+    font-style: italic;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-top: 225px;
+}
+
+.bg {
+    background-image: url(img/journey_bg.png);
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Boostrap Override */
+
+.container  {
+    min-width: 900px;
+}
+
+.btn-primary {
+    background-color: #253462;
+    width: 100%;
+    font-size: 1em;
+    padding: 30px 0;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
