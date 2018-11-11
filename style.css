@@ -3,8 +3,10 @@ body, html {
     font-family: 'Open Sans', sans-serif;
 }
 
-h2 {
-    font-size: 10em;
+
+h1 {
+    font-size: 3em;
+    font-weight: 300;
 }
 
 .bold {
@@ -14,6 +16,15 @@ h2 {
 
 .center {
     text-align: center;
+}
+
+.title {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.counter {
+    margin-top: 20px;
 }
 
 .app-card {
@@ -31,6 +42,57 @@ h2 {
     font-style: italic;
     max-width: 80%;
     margin: 0 auto;
+}
+
+.question-card {
+    -webkit-box-shadow: 15px 15px 50px -10px rgba(179,179,179,0.54);
+    -moz-box-shadow: 15px 15px 50px -10px rgba(179,179,179,0.54);
+    box-shadow: 15px 15px 50px -10px rgba(179,179,179,0.54);
+    border-radius: 30px;
+    background-color: #fff;
+    padding: 50px 0 50px 0;
+    margin-top: 100px;
+    background-image: linear-gradient(top, #253462, #253462 5%, transparent 5%, transparent 100%);
+    background-image: -webkit-linear-gradient(top, #253462, #253462 5%, transparent 5%, transparent 100%) 
+}
+
+.question-text {
+    font-size: 2.5em;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 50px;
+}
+
+.question-button-group {
+    margin: 50px 0px;
+}
+
+.question-button {
+    max-width: 250px;
+}
+
+.q {
+    padding: 20px 40px;
+    margin: 0;
+    border-radius: 20px;
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.q-yes {
+    background-color: #4c7436;
+    margin-right: 20px;
+}
+
+.q-somewhat {
+    background-color: #D0B362;
+}
+
+.q-no {
+    background-color: #b33a3b;
+    margin-left: 20px;
 }
 
 .logo {
@@ -62,3 +124,16 @@ h2 {
     margin: 0 auto;
 }
 
+input[type=radio]{
+    transform:scale(3);
+  }
+
+.progress {
+    height: 30px;
+    border-radius: 50px;
+    margin-top: 120px;
+}
+
+.progress-bar {
+    background-color: #253462;
+}
