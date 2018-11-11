@@ -35,6 +35,7 @@ var url = 'mongodb://'+authenticate+mongodbHost+':'+mongodbPort + '/' + mongodbD
 MongoClient.connect(url, function(err, db) {
    assert.equal(null, err);
    console.log("Connected correctly to server.");
+  // db.collection('userdata');
 //var cursor = collection.find({});
     // find top 20 countries by  size
    
@@ -51,6 +52,9 @@ app.use(bodyParser.json());
 
 app.get('/',function(req,res) {
 	res.sendFile(path.join(__dirname+'/index.html'));
+});
+app.get('/map',function(req,res) {
+	res.sendFile(path.join(__dirname+'/testmap.html'));
 });
 app.post('/', function (req, res) {
   console.log(req.body.test);
