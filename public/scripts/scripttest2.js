@@ -28,6 +28,7 @@ const dataArray = [
         false,
         false,
         "Veterans Northeast Outreach Center",
+        "www.vneoc.org/",
         42.77247,
         -71.09032
     ],
@@ -45,7 +46,8 @@ const dataArray = [
         true,
         false,
         false,
-        "Wounded Warrior Project"
+        "Wounded Warrior Project",
+        "www.woundedwarriorproject.org/"
     ],
     [
         3,
@@ -62,6 +64,7 @@ const dataArray = [
         false,
         false,
         "Statewide Advocacy for Veterans Empowerment",
+        "www.mass.gov/service-details/statewide-advocacy-for-veterans-empowerment-save",
         42.35286,
         -71.06223
     ],
@@ -80,6 +83,7 @@ const dataArray = [
         true,
         false,
         "Veterans Inc",
+        "www.veteransinc.org/",
         42.27399,
         -71.80075
     ],
@@ -98,6 +102,7 @@ const dataArray = [
         false,
         true,
         "Massachusetts Bay Veterans Center",
+        "www.voamass.org/our-services/veterans/massachusettsbayveteranscenter/",
         42.4059,
         -71.13129
     ],
@@ -116,6 +121,7 @@ const dataArray = [
         false,
         false,
         "New England Center and Home for Veterans",
+        "www.nechv.org/",
         42.35929,
         -71.05836
     ],
@@ -132,6 +138,7 @@ const dataArray = [
         false,
         false,
         "AMVETS",
+        "amvets.org/",
         42.35788,
         -71.06281
     ],
@@ -149,7 +156,8 @@ const dataArray = [
         false,
         false,
         false,
-        "Hire Heroes USA"
+        "Hire Heroes USA",
+        "www.hireheroesusa.org/"
     ],
     [
         9,
@@ -165,7 +173,8 @@ const dataArray = [
         false,
         false,
         false,
-        "Hiring Our Heroes"
+        "Hiring Our Heroes",
+        "www.hiringourheroes.org/"
     ],
     [
         10,
@@ -181,7 +190,8 @@ const dataArray = [
         false,
         false,
         false,
-        "Hire Veterans"
+        "Hire Veterans",
+        "hireveterans.com/"
     ],
     [
         11,
@@ -197,7 +207,8 @@ const dataArray = [
         false,
         false,
         false,
-        "Mass Hire for Veterans"
+        "Mass Hire for Veterans",
+        "mass-veterans.jobs/"
     ],
     [
         12,
@@ -213,7 +224,8 @@ const dataArray = [
         false,
         false,
         false,
-        "My Next Move"
+        "My Next Move",
+        "www.mynextmove.org/vets/"
     ],
     [
         13,
@@ -230,6 +242,7 @@ const dataArray = [
         false,
         false,
         "Mass Veterans Employment Representative",
+        "www.mass.gov/service-details/veterans-employment-representatives-list",
         42.33089,
         -71.0795
     ],
@@ -247,7 +260,8 @@ const dataArray = [
         false,
         true,
         false,
-        "Mass Home for the Brave Loan Program"
+        "Mass Home for the Brave Loan Program",
+        "www.mass.gov/veterans/housing/home-loans/home-for-the-brave.html"
     ],
     [
         15,
@@ -263,7 +277,7 @@ const dataArray = [
         false,
         false,
         true,
-        "Caritas Communities",
+        "Caritas Communities", "caritascommunities.org/our-programs/veterans-housing/"
         42.22532,
         -71.02735
     ],
@@ -281,7 +295,7 @@ const dataArray = [
         false,
         false,
         true,
-        "Veteran Homestead",
+        "Veteran Homestead", "www.veteranhomestead.org/", 
         42.59855,
         -71.98193
     ],
@@ -299,7 +313,7 @@ const dataArray = [
         false,
         true,
         true,
-        "Operation Homefront"
+        "Operation Homefront", "www.operationhomefront.org/custompage?Id=6714"
     ],
     [
         1000,
@@ -315,7 +329,7 @@ const dataArray = [
         true,
         true,
         true,
-        "Veterans Administration Boston Office",
+        "Veterans Administration Boston Office", "www.va.gov",
         42.36134,
         -71.05936
     ]
@@ -389,10 +403,10 @@ window.onload = function() {
         console.log(outputArray);
         var objects = new Array();
         for (i = 0; i < outputArray.length; i++) {
-            if (outputArray[i][14]) {
+            if (outputArray[i][15]) {
                 var testcoords = {
-                    lat: outputArray[i][14],
-                    lng: outputArray[i][15]
+                    lat: outputArray[i][15],
+                    lng: outputArray[i][16]
                 };
                 objects[i] = new google.maps.Marker({
                     position: testcoords,
