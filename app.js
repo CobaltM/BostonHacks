@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var path    = require("path");
 var bodyParser     = require("body-parser");
+var expressSession = require("express-session");
+var connectMongo =  require("connect-mongo")
 var mongo = require('mongodb');
 var valid;
 var data = "test";
@@ -42,15 +44,22 @@ MongoClient.connect(url, function(err, db) {
  
 }) //connect()
 //
-app.set('views', __dirname + '/public');
+app.use(express.static('public'));
 app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname, '/scripts')));
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
+app.use(expressSession({secret: "it'sasecrettoeveryone",
+    name: "insomnia",
+    //store: sessionStore, // connect-mongo session store
+    proxy: true,
+    resave: true,
+    saveUninitialized: true}));
 
 app.get('/',function(req,res) {
+	var sessD = req.session.submitdata;
 	res.sendFile(path.join(__dirname+'/index.html'));
 });
 app.get('/map',function(req,res) {
