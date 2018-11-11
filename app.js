@@ -62,6 +62,11 @@ app.get('/',function(req,res) {
 	var sessD = req.session.submitdata;
 	res.sendFile(path.join(__dirname+'/index.html'));
 });
+app.get('/results',function(req,res) {
+  res.sendFile(path.join(__dirname+'/public/results.html'))
+  var result =  req.body.one;
+  console.log(result);
+});
 app.get('/map',function(req,res) {
 	res.sendFile(path.join(__dirname+'/testmap.html'));
 });

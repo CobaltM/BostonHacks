@@ -42,37 +42,59 @@
                         </p>
 
                     <div class="question-button-group">
-						<img src="img/yes.svg" onclick = "green()" alt="Yes" class="question-button">
-						
-						<img src="img/some.svg" onclick = "yellow()" alt="Somewhat" class="question-button">
-						
-                        <img src="img/no.svg"  onclick = "red()" alt="No" class="question-button">
+	                    <form id = "form-id" action="/results">
+	                    	<input type=number name="one" id = "one" style ="display:none" />
+	                    	<input type=number name="two" id = "two" style ="display:none" />
+	                    	<input type=number name="three"  id = "three" style ="display:none" />
+	                    	<input type=number name="four" id = "four" style ="display:none" />
+	                    	<input type=number name="five" id = "five" style ="display:none" />
+	                    	<input type=number name="six" id = "six" style ="display:none" />
+							<img src="img/yes.svg" onclick = "green()" alt="Yes" class="question-button">
+							
+							<img src="img/some.svg" onclick = "yellow()" alt="Somewhat" class="question-button">
+							
+	                        <img src="img/no.svg"  onclick = "red()" alt="No" class="question-button">
+	                    </form>
                     </div>
                 </div>
 
             <script src = "/scripts/scripttest3.js"></script>
-            <script>
-				var score6 = getCookie("score6");
-            	function red(){
-            		score6 = parseInt(score6)+3;
-            		setCookie('score6',score6,100)
-            		window.location.href = "results.html"
-            	}
-            	function yellow(){
-            		score6 = parseInt(score6)+1;
-            		setCookie('score6',score6,100)
-            		window.location.href = "results.html"
-            	}
-            	function green(){
-            		window.location.href = "results.html"
-            	}
-            </script>
+            
 			<div class="mt-5">
 				<h2 class="counter float-right">12/12</h2>
 				<a href="q11.html">
 					<h2 class="counter float-left"><i class="fas fa-chevron-left"></i> Go Back</h2>
 				</a>
 			</div>
+			<script>
+				var score6 = getCookie("score6");
+				var form = document.getElementById("form-id");
+				var one = parseInt(getCookie("score1",0,100));
+				var two = parseInt(getCookie("score2",0,100));
+				var three = parseInt(getCookie("score3",0,100));
+				var four = parseInt(getCookie("score4",0,100));
+				var five = parseInt(getCookie("score5",0,100));
+				var six = parseInt(getCookie("score6",0,100));
+				document.getElementById("one").value = one;
+				document.getElementById("two").value = two;
+				document.getElementById("three").value = three;
+				document.getElementById("four").value = four;
+				document.getElementById("five").value = five;
+				document.getElementById("six").value = six;
+            	function red(){
+            		score6 = parseInt(score6)+3;
+            		setCookie('score6',score6,100)
+            		form.submit();
+            	}
+            	function yellow(){
+            		score6 = parseInt(score6)+1;
+            		setCookie('score6',score6,100)
+            		form.submit();
+            	}
+            	function green(){
+            		form.submit();
+            	}
+            </script>
 
 	<!-- Bootstrap 4 JS  -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

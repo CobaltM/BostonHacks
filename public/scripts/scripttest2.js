@@ -277,7 +277,7 @@ const dataArray = [
         false,
         false,
         true,
-        "Caritas Communities", "caritascommunities.org/our-programs/veterans-housing/"
+        "Caritas Communities", "caritascommunities.org/our-programs/veterans-housing/",
         42.22532,
         -71.02735
     ],
@@ -412,8 +412,18 @@ window.onload = function() {
                     position: testcoords,
                     map: map,
                     title: outputArray[i][13],
-                    optimized: false
+                    optimized: false,
+                    test: outputArray[i][14]
                 });
+                if(outputArray[14]){
+                  objects[i].addListener('click', function() {
+                    map.setZoom(12);
+                    map.setCenter(this.getPosition());
+                    var url = this.test;
+                    console.log(url);
+                    window.open("http://"+url,'','width=,height=,resizable=no');
+                  });
+                }
             } else continue;
         }
         var startPos;
