@@ -4,63 +4,36 @@ var startPos;
   var z;
   var nudge = document.getElementById("nudge");
   var map;
-async function go(){
-  
-
-  var showNudgeBanner = function() {
-    nudge.style.display = "block";
-  };
-
-  var hideNudgeBanner = function() {
-    nudge.style.display = "none";
-  };
-
-  var nudgeTimeoutId = setTimeout(showNudgeBanner, 5000);
-
+/*function initMap() {
+	map = new google.maps.Map(document.getElementById('map'), {
+	  center: {lat: usrlat, lng: usrlong},
+	  zoom: 8
+	});
+*/
+window.onload = function() {
+  var startPos;
   var geoSuccess = function(position) {
-  	var finalPos;
-    hideNudgeBanner();
-    // We have the location, don't display banner
-    clearTimeout(nudgeTimeoutId);
-
-    // Do magic with location
     startPos = position;
-    try{
-    	x = startPos.coords.latitude;
-    	y = startPos.coords.latitude;
-    }
-    catch(error){
-    	console.log(error);
-    }
-    
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+    var coords = new google.maps.LatLng(startPos.coords.latitude,startPos.coords.longitude);
+    var mapOptions = {
+        zoom: 13,
+        center: coords,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(
+        document.getElementById("map"), mapOptions
+        );
   };
   var geoError = function(error) {
-    switch(error.code) {
-      case error.TIMEOUT:
-        // The user didn't accept the callout
-        showNudgeBanner();
-        break;
-    }
+    console.log('Error occurred. Error code: ' + error.code);
+    // error.code can be:
+    //   0: unknown error
+    //   1: permission denied
+    //   2: position unavailable (error response from location provider)
+    //   3: timed out
   };
-
   navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
-  }
-/*
-
-
-VVV  ACTUAL MAP VVV
-
-
-
-*/
-go();
-
-      async function initMap() {
-      	
-      	finalPos = await go();
-      	console.log(startPos);
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
+  
+};
