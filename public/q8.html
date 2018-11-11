@@ -42,15 +42,31 @@
                         </p>
 
                     <div class="question-button-group">
-						<img src="img/yes.svg" alt="Yes" class="question-button">
+						<img src="img/yes.svg" onclick = "green()" alt="Yes" class="question-button">
 						
-						<img src="img/some.svg" alt="Somewhat" class="question-button">
+						<img src="img/some.svg" onclick = "yellow()" alt="Somewhat" class="question-button">
 						
-                        <img src="img/no.svg" alt="No" class="question-button">
+                        <img src="img/no.svg"  onclick = "red()"alt="No" class="question-button">
                     </div>
                 </div>
 
-
+            <script src = "/scripts/scripttest3.js"></script>
+            <script>
+				var score4 = getCookie("score4");
+            	function red(){
+            		score4 = parseInt(score4)+3;
+            		setCookie('score4',score4,100)
+            		window.location.href = "q9.html"
+            	}
+            	function yellow(){
+            		score4 = parseInt(score4)+1;
+            		setCookie('score4',score4,100)
+            		window.location.href = "q9.html"
+            	}
+            	function green(){
+            		window.location.href = "q9.html"
+            	}
+            </script>
 			<div class="mt-5">
 				<h2 class="counter float-right">8/12</h2>
 				<a href="q7.html">
