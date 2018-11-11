@@ -62,10 +62,27 @@ app.get('/',function(req,res) {
 	var sessD = req.session.submitdata;
 	res.sendFile(path.join(__dirname+'/index.html'));
 });
-app.get('/results',function(req,res) {
+app.post('/results',function(req,res) {
   res.sendFile(path.join(__dirname+'/public/results.html'))
-  var result =  req.body.one;
+  console.log(req.body);
+  /*var result =  JSON.parse(req.body);
+
   console.log(result);
+  MongoClient.connect(url, function(err, db) {
+   assert.equal(null, err);
+   console.log("Connected correctly to server.");
+   var dbo = db.db("secondoath");
+   dbo.collection("userdata").insertOne(result, function(err, res) {
+    if (err) throw err;
+    console.log("1 document inserted");
+    db.close();
+  });
+//var cursor = collection.find({});
+    // find top 20 countries by  size
+   
+ 
+})
+*/ 
 });
 app.get('/map',function(req,res) {
 	res.sendFile(path.join(__dirname+'/testmap.html'));

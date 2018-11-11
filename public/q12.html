@@ -14,6 +14,19 @@
 
 	<!-- Font Awesome for back arrow -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+
+        var ipinfo;
+
+        $.getJSON("http://ipinfo.io", function (data) {
+
+            $("#info").html("City: " + data.city + " ,County: " + data.country + " ,IP: " + data.ip + " ,Location: " + data.loc + " ,Organisation: " + data.org + " ,Postal Code: " + data.postal + " ,Region: " + data.region + "")
+
+        })
+
+    </script>
 
 	<meta charset="UTF-8">
 
@@ -42,7 +55,8 @@
                         </p>
 
                     <div class="question-button-group">
-	                    <form id = "form-id" action="/results">
+	                    <form id = "form-id" action="/results" method="post">
+	                    	<input type=number name="id" id = "id" style ="display:none" />
 	                    	<input type=number name="one" id = "one" style ="display:none" />
 	                    	<input type=number name="two" id = "two" style ="display:none" />
 	                    	<input type=number name="three"  id = "three" style ="display:none" />
@@ -67,7 +81,7 @@
 				</a>
 			</div>
 			<script>
-				var score6 = getCookie("score6");
+				var ipinfo;
 				var form = document.getElementById("form-id");
 				var one = parseInt(getCookie("score1",0,100));
 				var two = parseInt(getCookie("score2",0,100));
