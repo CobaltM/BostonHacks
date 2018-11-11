@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<title>Self-Assessment Form</title>
+
+	<!-- Bootstrap 4.0 CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="aboutme-style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Google Font (Open Sans Light, Reg, and Bold) -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,700i" rel="stylesheet">
+
+	<!-- Font Awesome for back arrow -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	<meta charset="UTF-8">
+
+	<style>
+		a, a:hover, a:visited {
+   		color: inherit;   
+        }
+        
+        .result-section {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        .results {
+            font-weight: 700;
+            font-style: italic;
+            font-size: 3em;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .resource {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .show-result {
+            font-weight: 400;
+            font-style: normal;
+            font-size: 0.75em;
+        }
+
+        .resource-title {
+            font-weight: 700;
+            font-style: italic;
+            font-size: 2em;
+        }
+
+        .resource-desc {
+            font-size: 1.8em;
+            margin-top: 30px;
+        }
+
+        .type-icon {
+            max-width: 90px;
+        }
+
+        .resource-card {
+            -webkit-box-shadow: 15px 15px 50px -10px rgba(179,179,179,0.54);
+            -moz-box-shadow: 15px 15px 50px -10px rgba(179,179,179,0.54);
+            box-shadow: 15px 15px 50px -10px rgba(179,179,179,0.54);
+            border-radius: 30px;
+            background-color: #fff;
+            padding: 50px 0 50px 0;
+            margin-top: 100px;
+        }
+
+	</style>
+
+	</head>
+
+	<body>
+		<div class="bg" style="margin-bottom: 100px;">
+            <a href="index.html">
+                <img src="img/logo.svg" alt="Second Oath Logo" class="logo" style="margin-bottom: 180px;">
+            </a>
+		</div>
+		
+		<div class="container" style="margin-top: 200px;">
+
+                <p class="center" style="font-size: 3em; font-weight: 700; font-style: italic;">Your Results</p>
+                <p class="inner-text">These results are meant to act as a starting point in thinking about your transitional well-being. </p>
+
+                <div class="app-card center">
+                    <div class="row results">
+                        <div class="col">
+                            <div class="row result-section">
+                                <div class="col">
+                                    Work
+                                <img src="img/green.svg" id="1">
+                                <img src="img/yellow.svg" id="2">
+                                <img src="img/red.svg" id="3">
+                                </div>
+                            </div>
+                            <div class="row result-section">
+                                <div class="col">
+                                    Finances
+                                <img src="img/green.svg" id="4">
+                                <img src="img/yellow.svg" id="5">
+                                <img src="img/red.svg" id="6">
+                                </div>
+                            </div>
+                            <div class="row result-section">
+                                <div class="col">
+                                    Health
+                                <img src="img/green.svg" id="7">
+                                <img src="img/yellow.svg" id="8">
+                                <img src="img/red.svg" id="9">    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row result-section">
+                                <div class="col">
+                                    Life Skills
+                                <img src="img/green.svg" id="10">
+                                <img src="img/yellow.svg" id="11">
+                                <img src="img/red.svg" id="12">    
+                                </div>
+                            </div>
+                            <div class="row result-section">
+                                <div class="col">
+                                    Social
+                                <img src="img/green.svg" id="13">
+                                <img src="img/yellow.svg" id="14">
+                                <img src="img/red.svg" id="15">     
+                                </div>
+                            </div>
+                            <div class="row result-section">
+                                <div class="col">
+                                    Housing
+                                <img src="img/green.svg" id="16">
+                                <img src="img/yellow.svg" id="17">
+                                <img src="img/red.svg" id="18">     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="center" style="font-size: 3em; font-weight: 700; font-style: italic; margin-top: 90px;">Resources for You</p>
+                <p class="inner-text my-3">Below you’ll find resources in your area that match your unique Second Oath profile.  </p>
+
+                <!-- Map Here -->
+
+    <footer>
+            © Second Oath <br> 2018
+    </footer>
+
+	<!-- Bootstrap 4 JS  -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</div>
+	</body>
+</html>

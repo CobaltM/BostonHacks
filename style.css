@@ -100,7 +100,7 @@ h1 {
 }
 
 .bg {
-    background-image: url(img/journey_bg.png);
+    background-image: url(img/journey_bg_blue.png);
     height: 500px;
     width: 100%;
     background-position: center;
@@ -136,4 +136,10 @@ input[type=radio]{
 
 .progress-bar {
     background-color: #253462;
+}
+
+footer {
+    font-weight: 300;
+    text-align: center;
+    padding: 50px 0px;
 }
