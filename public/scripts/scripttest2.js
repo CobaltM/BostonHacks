@@ -326,7 +326,7 @@ const scoreArray = [
     parseInt(getCookie("score4")),
     parseInt(getCookie("score2")),
     parseInt(getCookie("score5")),
-    parseInt(getCookie("score4")),
+    parseInt(getCookie("score3")),
     parseInt(getCookie("score6"))
 ];
 
@@ -374,7 +374,7 @@ window.onload = function() {
             startPos.coords.longitude
         );
         var mapOptions = {
-            zoom: 13,
+            zoom: 10,
             center: coords,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
